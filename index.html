@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jQuery � �X</title>
+    <title>jQuery 도형 변환</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         body {
@@ -41,7 +41,7 @@
 </head>
 <body>
     <div id="shape"></div>
-    <button id="changeBtn">� �D h �<\ ��</button>
+    <button id="changeBtn">파란 사각형을 빨간 원으로 변경</button>
 
     <script>
         $(document).ready(function() {
@@ -50,7 +50,7 @@
                     'background-color': 'red',
                     'border-radius': '50%'
                 });
-                $(this).text('�� D�!').prop('disabled', true);
+                $(this).text('변경 완료!').prop('disabled', true);
             });
         });
     </script>
