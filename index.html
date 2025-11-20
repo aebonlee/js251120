@@ -3,17 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>잠만보 배경 애니메이션</title>
-    <link rel="stylesheet" href="style.css">
+    <title>jQuery � �X</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #shape {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            margin: 20px;
+            transition: all 0.5s ease;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <canvas id="canvas"></canvas>
-    <div class="controls">
-        <button id="startBtn">시작</button>
-        <button id="stopBtn">정지</button>
-        <button id="speedUpBtn">빠르게</button>
-        <button id="slowDownBtn">느리게</button>
-    </div>
-    <script src="app.js"></script>
+    <div id="shape"></div>
+    <button id="changeBtn">� �D h �<\ ��</button>
+
+    <script>
+        $(document).ready(function() {
+            $('#changeBtn').click(function() {
+                $('#shape').css({
+                    'background-color': 'red',
+                    'border-radius': '50%'
+                });
+                $(this).text('�� D�!').prop('disabled', true);
+            });
+        });
+    </script>
 </body>
 </html>
